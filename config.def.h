@@ -2,13 +2,13 @@
 
 /* appearance */
 static const unsigned int borderpx  = 4;        /* border pixel of windows */
-static const unsigned int gappx     = 10;        /* gaps between windows */
-static const unsigned int snap      = 10;       /* snap pixel */
+static const unsigned int gappx     = 8;        /* gaps between windows */
+static const unsigned int snap      = 0;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "monospace:size=12" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "Fira Mono for Powerline:size=12" };
+static const char dmenufont[]       = "Fira Mono for Powerline:size=10";
 static const char col_gray1[]       = "#231a18";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -37,16 +37,16 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
-static int attachbelow = 1;    /* 1 means attach after the currently active window */
+static int attachbelow = 0;    /* 1 means attach after the currently active window */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "[]",      tile },    /* first entry is default */
+	{ "<>",      NULL },    /* no layout function means floating behavior */
+	{ "|M|",      monocle },
 };
 
 /* key definitions */
