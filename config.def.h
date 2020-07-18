@@ -11,8 +11,8 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = False;     /* Switch view on tag switch */
-static const char *fonts[]          = { "Fira Mono for Powerline:size=12" };
-static const char dmenufont[]       = "Fira Mono for Powerline:size=10";
+static const char *fonts[]          = { "FiraCode Nerd Font:size=12" };
+static const char dmenufont[]       = "FiraCode Nerd Font:size=10";
 static const char col_gray1[]       = "#231a18";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
