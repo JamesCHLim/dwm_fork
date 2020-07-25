@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const unsigned int gappx     = 0;        /* gaps between windows */
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
+static const unsigned int gappx     = 12;        /* gaps between windows */
 static const unsigned int snap      = 0;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 1;   /* systray spacing */
@@ -15,10 +15,10 @@ static const Bool viewontag         = False;     /* Switch view on tag switch */
 static const char *fonts[]          = { "FiraCode Nerd Font:size=12" };
 static const char dmenufont[]       = "FiraCode Nerd Font:size=10";
 static const char col_gray1[]       = "#231a18";
-static const char col_gray2[]       = "#444444";
+static const char col_gray2[]       = "#373b41";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_brown[]      = "#BA6E5B";
+static const char col_brown[]      = "#ba6e5b";
 static const char col_gray[]        = "#A1A1A1";
 static const char col_black[]       = "#2D2D2D";
 
@@ -46,6 +46,9 @@ static const Rule rules[] = {
 	{ "Terraria", NULL,       NULL,       0,            1,           -1 },
 	{ "Nautilus", NULL,       NULL,       0,            1,           -1 },
 	{ "Virt-manager", NULL,   NULL,       0,            1,           -1 },
+	{ "Oomox",    NULL,       NULL,       0,            1,           -1 },
+	{ "Gpick",    NULL,       NULL,       0,            1,           -1 },
+	{ "zoom",     NULL,       NULL,       0,            1,           -1 },
 	{ NULL,       NULL,       "Event Tester",  0,       1,           -1 },
 	{ NULL,       NULL,       "nmtui",    0,            1,           -1 },
 	{ NULL,       NULL,       "alsamixer", 0,           1,           -1 },
@@ -110,8 +113,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_minus,  setgaps,        {.i = -5 } },
-	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
+	{ MODKEY,                       XK_minus,  setgaps,        {.i = -4 } },
+	{ MODKEY,                       XK_equal,  setgaps,        {.i = +4 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
