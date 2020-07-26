@@ -857,7 +857,7 @@ drawbar(Monitor *m)
             drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : SchemeNorm]);
         }
         else { /* modified to only draw colour on current monitor*/
-            drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << SchemeSel]);
+            drw_setscheme(drw, scheme[SchemeNorm]);
         }
 		drw_text(drw, x, 0, w, bh, lrpad / 2, tags[i], urg & 1 << i);
 		if (occ & 1 << i)
@@ -872,10 +872,10 @@ drawbar(Monitor *m)
 
 	if ((w = m->ww - sw - stw - x) > bh) {
 		if (m->sel) {
-			drw_setscheme(drw, scheme[m == selmon ? SchemeNorm : SchemeNorm]); /* modified to not display color on bar text */
+			drw_setscheme(drw, scheme[SchemeNorm]); /* modified to not display color on bar text */
 			drw_text(drw, x, 0, w, bh, lrpad / 2 + 4, m->sel->name, 0);
 			if (m->sel->isfloating)
-				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
+				drw_rect(drw, x, 0, boxw + 3, boxw, m->sel->isfixed, 0); /* modified to rectangle shape */
 		} else {
 			drw_setscheme(drw, scheme[SchemeNorm]);
 			drw_rect(drw, x, 0, w, bh, 1, 1);
