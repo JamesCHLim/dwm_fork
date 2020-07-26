@@ -857,7 +857,7 @@ drawbar(Monitor *m)
             drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : SchemeNorm]);
         }
         else { /* modified to only draw colour on current monitor*/
-            drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << SchemeSel]);
+            drw_setscheme(drw, scheme[SchemeNorm]);
         }
 		drw_text(drw, x, 0, w, bh, lrpad / 2, tags[i], urg & 1 << i);
 		if (occ & 1 << i)
