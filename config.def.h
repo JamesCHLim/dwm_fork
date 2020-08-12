@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 20;        /* gaps between windows */
+static const unsigned int gappx     = 0;        /* gaps between windows */
 static const unsigned int snap      = 0;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 1;   /* systray spacing */
@@ -53,6 +53,7 @@ static const Rule rules[] = {
 	{ NULL,       NULL,       "nmtui",    0,            1,           -1 },
 	{ NULL,       NULL,       "alsamixer", 0,           1,           -1 },
 	{ NULL,       NULL,       "float",    0,            1,           -1 },
+	{ NULL,       "pop-up",   NULL,       0,            1,           -1 },
 	/* { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 }, */
 };
 
