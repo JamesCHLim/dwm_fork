@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int gappx     = 0;        /* gaps between windows */
 static const unsigned int snap      = 0;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -12,12 +12,12 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 22;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "FiraCode Nerd Font:size=12" };
-static const char dmenufont[]       = "FiraCode Nerd Font:size=10";
+static const char dmenufont[]       = "FiraCode Nerd Font:size=11";
 static const char col_gray1[]       = "#231a18";
 static const char col_gray2[]       = "#373b41";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_brown[]      = "#ba6e5b";
+static const char col_brown[]       = "#ba6e5b";
 static const char col_gray[]        = "#A1A1A1";
 static const char col_black[]       = "#2D2D2D";
 
@@ -48,6 +48,7 @@ static const Rule rules[] = {
 	{ "Oomox",    NULL,       NULL,       0,            1,           -1 },
 	{ "Gpick",    NULL,       NULL,       0,            1,           -1 },
 	{ "zoom",     NULL,       NULL,       0,            1,           -1 },
+	{ "Gnome-calculator", NULL, NULL,     0,            1,           -1 },
 	{ NULL,       NULL,       "Event Tester",  0,       1,           -1 },
 	{ NULL,       NULL,       "nmtui",    0,            1,           -1 },
 	{ NULL,       NULL,       "alsamixer", 0,           1,           -1 },
@@ -57,7 +58,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.60; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static int attachbelow = 0;    /* 1 means attach after the currently active window */
@@ -104,8 +105,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m,      setlayout,      {0} },
+	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
