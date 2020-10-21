@@ -75,7 +75,7 @@
 
 /* enums */
 enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
-enum { SchemeNorm, SchemeSel }; /* color schemes */
+enum { SchemeNorm, SchemeSel, SchemeInfoSel }; /* color schemes */
 enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
        NetSystemTray, NetSystemTrayOP, NetSystemTrayOrientation, NetSystemTrayOrientationHorz,
        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
@@ -866,7 +866,8 @@ drawbar(Monitor *m)
 
 	if ((w = m->ww - sw - stw - x) > bh) {
 		if (m->sel) {
-			drw_setscheme(drw, scheme[SchemeNorm]); /* modified to not display color on bar text */
+            /* SELF CHANGE HERE */
+			drw_setscheme(drw, scheme[SchemeInfoSel]); /* modified to not display color on bar text */
 			drw_text(drw, x, 0, w, bh, lrpad / 2 + 4, m->sel->name, 0);
 			if (m->sel->isfloating)
 				drw_rect(drw, x, 0, boxw + 3, boxw, m->sel->isfixed, 0); /* modified to rectangle shape */

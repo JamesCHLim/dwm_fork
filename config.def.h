@@ -13,18 +13,19 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 22;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "FiraCode Nerd Font:size=12" };
 static const char dmenufont[]       = "FiraCode Nerd Font:size=11";
-static const char col_gray1[]       = "#231a18";
+static const char col_gray1[]       = "#1f2023";
 static const char col_gray2[]       = "#373b41";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_brown[]       = "#ba6e5b";
 static const char col_gray[]        = "#A1A1A1";
-static const char col_black[]       = "#2D2D2D";
+static const char col_black[]       = "#151413";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_black, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_brown, col_brown  },
+	[SchemeNorm]    = { col_gray3, col_black, col_gray2 },
+	[SchemeSel]     = { col_gray4, col_brown, col_brown  },
+	[SchemeInfoSel] = { col_gray3, col_gray1, col_brown  },
 };
 
 /* tagging */
@@ -32,6 +33,7 @@ static const char *colors[][3]      = {
 /* static const char *tags[] = { "", "", "", "", "", "", "", "", "" }; */
 /* static const char *tags[] = { "⭕", "⭕", "⭕", "⭕", "⭕", "⭕", "⭕", "⭕", "⭕" }; */
 /* static const char *tags[] = { "", "", "", "", "", "", "", "", "" }; */
+/* static const char *tags[] = { "", "", "", "", "" }; */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
@@ -58,7 +60,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.60; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static int attachbelow = 0;    /* 1 means attach after the currently active window */
