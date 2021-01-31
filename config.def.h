@@ -10,7 +10,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 22;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const int user_bh            = 24;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "FiraCode Nerd Font:size=12" };
 static const char dmenufont[]       = "FiraCode Nerd Font:size=11";
 static const char col_gray1[]       = "#1f2023";
@@ -49,7 +49,6 @@ static const Rule rules[] = {
 	{ "Virt-manager", NULL,   NULL,       0,            1,           -1 },
 	{ "Oomox",    NULL,       NULL,       0,            1,           -1 },
 	{ "Gpick",    NULL,       NULL,       0,            1,           -1 },
-	{ "zoom",     NULL,       NULL,       0,            1,           -1 },
 	{ "Gnome-calculator", NULL, NULL,     0,            1,           -1 },
 	{ NULL,       NULL,       "Event Tester",  0,       1,           -1 },
 	{ NULL,       NULL,       "nmtui",    0,            1,           -1 },
