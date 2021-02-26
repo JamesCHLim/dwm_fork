@@ -50,6 +50,7 @@ static const Rule rules[] = {
 	{ "Oomox",    NULL,       NULL,       0,            1,           -1 },
 	{ "Gpick",    NULL,       NULL,       0,            1,           -1 },
 	{ "Gnome-calculator", NULL, NULL,     0,            1,           -1 },
+	{ "Pcmanfm",  NULL,       NULL,       0,            1,           -1 },
 	{ NULL,       NULL,       "Event Tester",  0,       1,           -1 },
 	{ NULL,       NULL,       "nmtui",    0,            1,           -1 },
 	{ NULL,       NULL,       "alsamixer", 0,           1,           -1 },
@@ -62,7 +63,7 @@ static const Rule rules[] = {
 static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
-static int attachbelow = 0;    /* 1 means attach after the currently active window */
+static int attachbelow = 1;    /* 1 means attach after the currently active window */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
