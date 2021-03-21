@@ -43,14 +43,15 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Steam",    NULL,       NULL,       0,            1,           -1 },
+	/* { "Steam",    NULL,       NULL,       0,            1,           -1 }, */
 	{ "Terraria", NULL,       NULL,       0,            1,           -1 },
 	{ "Nautilus", NULL,       NULL,       0,            1,           -1 },
-	{ "Virt-manager", NULL,   NULL,       0,            1,           -1 },
-	{ "Oomox",    NULL,       NULL,       0,            1,           -1 },
+	/* { "Virt-manager", NULL,   NULL,       0,            1,           -1 }, */
+	/* { "Oomox",    NULL,       NULL,       0,            1,           -1 }, */
 	{ "Gpick",    NULL,       NULL,       0,            1,           -1 },
 	{ "Gnome-calculator", NULL, NULL,     0,            1,           -1 },
 	{ "Pcmanfm",  NULL,       NULL,       0,            1,           -1 },
+	{ "Nm-connection-editor", NULL, NULL, 0,            1,           -1 },
 	{ NULL,       NULL,       "Event Tester",  0,       1,           -1 },
 	{ NULL,       NULL,       "nmtui",    0,            1,           -1 },
 	{ NULL,       NULL,       "alsamixer", 0,           1,           -1 },
@@ -114,6 +115,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY,                  XK_apostrophe,  togglefloating, {0} },
 	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
